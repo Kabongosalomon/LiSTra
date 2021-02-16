@@ -12,9 +12,22 @@ Inside the dataset folder, for each language we provide:
 
 ## Pipeline
 
-### Downloading Audio chapters for the source language from [bible.is](bible.is).
+- Source language Audio Download and Renaming : [01-Audio download Rename.ipynb](link)
 
-Follow the instruiction in the [BibleisWebScrapping.ipynb](link)notebook.
+- Download the corresponding text file for the source language :  [02-BibleisWebScrapping.ipynb](link).
+- Download the corresponding text file for the target language :  [03-JwWebscraping.ipynb](link).
+- Generate TextGrid files :  [04-webMausWavGenerator.ipynb](link).
+- Rename the wav files :  [05.Rename_wav_files.ipynb](link).
+
+
+After having you dataset you may need to run the following script to check for specific missing file:
+    - If the two forders contains text: `bash check_diff.sh english/ lingala/ false` 
+    - If the second folder is a folder to the waves : `bash check_diff.sh english/ wav_verse/ true`
+    - To compare raw_txt with TextGrid : `bash check_diff_TextGrid.sh english/raw_txt/ english/maus_textgrid/ true`
+
+Note: Please make sure the first param is the txt and the second is wav, if both are txt juste put the last param to false.
+
+
 
 ### Downloading Audio chapters for the source language from [bible.is](bible.is).
 
